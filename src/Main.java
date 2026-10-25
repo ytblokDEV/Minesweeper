@@ -11,8 +11,12 @@ public class Main {
         System.out.println("input height: ");
 
         int height = scanner.nextInt();
+        Board board1 = new Board();
+        Cell[][] board = board1.createBoard(width, height);
 
-        Cell[][] board  = Board.createBoard(width,height);
+        board1.print();
+        System.out.println("Width: " + board1.getWidth());
+        System.out.println("Height: " + board1.getHeight());
 
 
         scanner.close();
