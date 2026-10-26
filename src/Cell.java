@@ -5,8 +5,8 @@ public class Cell {
     private int neighborMines;
 
     public Cell(boolean isMine) {
-        this.isDug = isMine;
-        this.isMine = false;
+        this.isDug = false;
+        this.isMine = isMine;
         this.isFlagged = false;
         this.neighborMines = 0;
     }
