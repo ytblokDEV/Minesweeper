@@ -4,6 +4,7 @@ public class Board {
 
     public Cell[][] createBoard(int width, int height) {
         this.board = new Cell[height][width];
+        GUI.boardDisplaySettings(width,height);
         return this.board;
     }
 

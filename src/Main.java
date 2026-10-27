@@ -4,7 +4,6 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        GUI.gui();
 
         System.out.println("input width: ");
 
@@ -13,8 +12,13 @@ public class Main {
         System.out.println("input height: ");
 
         int height = scanner.nextInt();
+
+
+
         Board board1 = new Board();
         Cell[][] board = board1.createBoard(width, height);
+
+        GUI.gui();
 
         board1.print();
         System.out.println("Width: " + board1.getWidth());
