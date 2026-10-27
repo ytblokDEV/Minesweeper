@@ -1,19 +1,27 @@
 public class Board {
 
-    private Cell[][] board;
+    private Cell[][] cells;
 
-    public Cell[][] createBoard(int width, int height) {
-        this.board = new Cell[height][width];
-        GUI.boardDisplaySettings(width,height);
-        return this.board;
+    public Board(int width, int height) {
+        cells = new Cell[height][width];
+
+        for (int row = 0; row < height; row++) {
+            for (int col = 0; col < width; col++) {
+                cells[row][col] = new Cell(false);
+            }
+        }
     }
 
     public int getHeight() {
-        return board.length;
+        return cells.length;
     }
 
     public int getWidth() {
-        return board[0].length;
+        return cells[0].length;
+    }
+
+    public Cell getCell(int row, int col){
+        return cells[row][col];
     }
 
 

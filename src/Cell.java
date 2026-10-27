@@ -41,6 +41,11 @@ public class Cell {
         }
     }
 
+    @Override
+    public String toString() {
+        return "Cell{isMine=" + isMine + "}";
+    }
+
     public String dig() {
         if (isFlagged()) {
             return ("You can't dig here (you placed a flag here)");

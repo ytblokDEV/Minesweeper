@@ -1,3 +1,4 @@
+import javax.swing.*;
 import java.util.Scanner;
 
 public class Main {
@@ -15,14 +16,17 @@ public class Main {
 
 
 
-        Board board1 = new Board();
-        Cell[][] board = board1.createBoard(width, height);
+        Board board = new Board(width, height);
 
-        GUI.gui();
+        GUI.boardDisplaySettings(board);
 
-        board1.print();
-        System.out.println("Width: " + board1.getWidth());
-        System.out.println("Height: " + board1.getHeight());
+        SwingUtilities.invokeLater(() -> {
+            GUI.gui();
+        });
+
+        board.print();
+        System.out.println("Width: " + board.getWidth());
+        System.out.println("Height: " + board.getHeight());
 
 
         scanner.close();
