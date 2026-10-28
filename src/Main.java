@@ -1,4 +1,4 @@
-import javax.swing.*;
+import javax.swing.SwingUtilities;
 import java.util.Scanner;
 
 public class Main {
@@ -18,11 +18,15 @@ public class Main {
 
         Board board = new Board(width, height);
 
-        GUI.boardDisplaySettings(board);
+        Generator.setup(board);
+
+
+        GUI.boardInitialization(board);
 
         SwingUtilities.invokeLater(() -> {
             GUI.gui();
         });
+
 
         board.print();
         System.out.println("Width: " + board.getWidth());

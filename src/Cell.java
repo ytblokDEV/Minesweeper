@@ -11,6 +11,16 @@ public class Cell {
         this.neighborMines = 0;
     }
 
+    private boolean revealed = false;
+
+    public boolean isRevealed(){
+        return revealed;
+    }
+
+    public void reveal(){
+        revealed = true;
+    }
+
     public boolean isMine() {
         return isMine;
     }
