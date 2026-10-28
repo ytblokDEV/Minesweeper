@@ -1,7 +1,4 @@
-# Minesweeper — TODO 💣
-
-Plan rozwoju gry Minesweeper napisanej w Javie (Swing).
-
+# Minesweeper
 ## Najbliższe zadania
 
 - [ ] **Zablokować ponowne odkrywanie pola** — sprawdzać `isRevealed()` i `isFlagged()` przed odkryciem.
@@ -20,4 +17,3 @@ Plan rozwoju gry Minesweeper napisanej w Javie (Swing).
 - [ ] Poziomy trudności (liczba pól i min).
 - [ ] Zapisywanie najlepszych czasów.
 
-> Wskazówka: logika gry (miny, flagi, odkrywanie i zwycięstwo) powinna być w `Board`/`Cell`, a Swing powinien odpowiadać za wyświetlanie i obsługę wejścia.
